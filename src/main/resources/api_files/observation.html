@@ -1,0 +1,62 @@
+<h3 class="heading">Informacja o losach pacjenta - <span id="patient-name"></span></h3>
+<form id="observationForm" class="form-horizontal">
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Ostateczny stan pacjenta</label>
+        <div class="col-sm-10">
+            <div class="radio">
+                <label>
+                    <input type="radio" name="interview[finalPatientsState]" value="DIED_IN_HOSPITAL"> Zmarł w szpitalu
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="interview[finalPatientsState]" value="DIED_IN_6_MONTHS"> Zmarł w ciągu 6 miesięcy
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="interview[finalPatientsState]" value="ALIVE_AFTER_6_MONTHS"> Przeżył 6 miesięcy
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="interview[finalPatientsState]" value="UNKNOWN"> Nieznany
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputDateOfDeath" class="col-sm-2 control-label">Data zgonu</label>
+        <div class="col-sm-6">
+            <div class="input-group date">
+                <input type="text" class="form-control" id="inputDateOfDeath" name="interview[dateOfDeath]">
+                <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputApproximateDateOfDeath" class="col-sm-2 control-label">Przybliżona data zgonu</label>
+        <div class="col-sm-6">
+            <div class="input-group date">
+                <input type="text" class="form-control" id="inputApproximateDateOfDeath" name="interview[approximateDateOfDeath]">
+                <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputFinalStateNote" class="col-sm-2 control-label">Dodatkowe informacje</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" id="inputFinalStateNote" name="interview[finalStateNote]">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="btn-group btn-group-justified" role="group">
+            <div class="btn-group" role="group">
+                <a href="#go-back" class="btn btn-default col-xs-6">Anuluj</a>
+            </div>
+            <div class="btn-group" role="group">
+                <button id="submit-button" type="submit" class="btn btn-primary col-xs-6">Potwierdź</button>
+            </div>
+        </div>
+    </div>
+</form>

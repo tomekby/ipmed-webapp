@@ -1,0 +1,17 @@
+.table {
+    display: table;
+    border-style: solid;
+    border-width: 2px;
+}
+
+.table > * {
+    display: table-row;
+    border-style: solid;
+    border-width: 2px;
+
+}
+
+.table > * > * {
+    display: table-cell;border-style: solid;
+    border-width: 2px;
+}

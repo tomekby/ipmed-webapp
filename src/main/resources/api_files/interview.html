@@ -1,0 +1,1378 @@
+<h3 class="heading">Karta pacjenta - <span id="patient-name"></span></h3>
+<div id="examinations">
+	<form id="someCreator" class="form-horizontal">
+		<div class="panel panel-default">
+			<ul class="list-group">
+				<!-- element rozwijany -->
+				<li class="list-group-item">
+					<div class="row toggle" id="dropdown-detail-1" data-toggle="detail-1">
+						<div class="interview-chevron"><i class="fa fa-chevron-down"></i></div>
+						<div class="col-xs-10">Informacje podstawowe</div>
+					</div>
+					<div id="detail-1">
+						<hr></hr>
+						<div class="container">
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputLastName" class="col-sm-2 control-label">Nazwisko</label>
+										<div class="col-xs-5">
+											<input type="text" class="form-control" id="inputLastName" placeholder="Nazwisko" title="Nazwisko" name="surname" required>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputFirstName" class="col-sm-2 control-label">Imię (imiona)</label>
+										<div class="col-xs-5">
+											<input type="text" class="form-control" id="inputFirstName" placeholder="Imię (imiona)" title="Imię&nbsp;(imiona)" name="firstName" required>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputPESEL" class="col-sm-2 control-label">PESEL</label>
+										<div class="col-xs-5">
+											<input type="text" data-bv-digits class="form-control" id="inputPESEL" placeholder="PESEL" name="identityNumber" required value="">
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputBirthDate" class="col-sm-2 control-label">Data urodzenia</label>
+										<div class="col-xs-5">
+											<div class="input-group date">
+												<input type="text" class="form-control" id="inputBirthDate" name="birthDate" data-bv-date="true" data-bv-date-format="YYYY-MM-DD" required>
+												<span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputSexK" class="col-sm-2 control-label">Płeć</label>
+										<div class="col-xs-5">
+											<div class="radio">
+												<label>
+													<input type="radio" name="interview[sex]" id="inputSexK" value="MALE"> Mężczyzna
+												</label>
+											</div>
+											<div class="radio">
+												<label>
+													<input type="radio" name="interview[sex]" id="inputSexM" value="FEMALE"> Kobieta
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputBodyMass" class="col-sm-2 control-label">Masa ciała</label>
+										<div class="col-xs-5">
+											<div class="input-group unit">
+												<input type="text" data-bv-digits id="inputBodyMass" class="form-control" placeholder="Masa ciała" name="interview[weight]" required>
+												<span class="input-group-addon">kg</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label class="col-sm-2 control-label">Sposób ustalenia masy</label>
+										<div class="col-xs-5">
+											<div class="radio">
+												<label>
+													<input type="radio" name="interview[weightAccuracy]" id="inputWeightAccuracy1" value="MEASURED"> Pacjent zważony
+												</label>
+											</div>
+											<div class="radio">
+												<label>
+													<input type="radio" name="interview[weightAccuracy]" id="inputWeightAccuracy2" value="ESTIMATED"> Waga oszacowana
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputHeight" class="col-sm-2 control-label">Wzrost</label>
+										<div class="col-xs-5">
+											<div class="input-group unit">
+												<input type="text" data-bv-digits id="inputHeight" class="form-control" placeholder="Wzrost" name="interview[height]" required>
+												<span class="input-group-addon">cm</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputHospitalTake" class="col-sm-2 control-label">Data przyjęcia do szpitala</label>
+										<div class="col-xs-5">
+											<div class="input-group date">
+												<input type="text" class="form-control" id="inputHospitalTake" name="interview[arrivalDate]" data-bv-date="true" data-bv-date-format="YYYY-MM-DD" required>
+												<span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputDoctor" class="col-sm-2 control-label">Lekarz prowadzący</label>
+										<div class="col-xs-5">
+											<input type="text" class="form-control" id="inputDoctor" placeholder="Lekarz prowadzący" title="Lekarz&nbsp;prowadzący" name="doctor" required>
+										</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputStrokeOccur" class="col-sm-2 control-label">Data wystąpienia udaru</label>
+										<div class="col-xs-5">
+											<div class="input-group date">
+												<input type="text" class="form-control" id="inputStrokeOccur" name="interview[strokeDate]" data-bv-date="true" data-bv-date-format="YYYY-MM-DD" required>
+												<span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputContactPhone" class="col-sm-2 control-label">Telefon kontaktowy 1</label>
+										<div class="col-xs-5">
+											<input type="text" id="inputContactPhone" class="form-control" placeholder="Niezbędny do kontaktu po 6 miesiącach" title="Niezbędny&nbsp;do&nbsp;kontaktu&nbsp;po&nbsp;6&nbsp;miesiącach" name="interview[phoneNumber]" required>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputContactPhone2" class="col-sm-2 control-label">Telefon kontaktowy 2</label>
+										<div class="col-xs-5">
+											<input type="text" id="inputContactPhone2" class="form-control" placeholder="Dodatkowy, do kontaktu po 6 miesiącach" title="Dodatkowy,&nbsp;do&nbsp;kontaktu&nbsp;po 6&nbsp;miesiącach" name="interview[phoneNumber2]">
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputEducation1" class="col-sm-2 control-label">Wykształcenie</label>
+										<div class="col-xs-5">
+											<div class="radio">
+												<label><input type="radio" name="interview[education]" id="inputEducation1" value="HIGHER"> wyższe</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[education]" id="inputEducation2" value="SECONDARY"> średnie</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[education]" id="inputEducation3" value="BASIC"> podstawowe</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[education]" id="inputEducation4" value="DATA_UNAVAILABLE"> brak danych</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputEmployment1" class="col-sm-2 control-label">Zatrudnienie</label>
+										<div class="col-xs-5">
+											<div class="radio">
+												<label><input type="radio" name="interview[employment]" id="inputEmployment1" value="PENSIONER"> emeryt</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[employment]" id="inputEmployment2" value="DISABLED"> rencista</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[employment]" id="inputEmployment3" value="ACTIVE"> czynny zawodowo</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[employment]" id="inputEmployment4" value="DATA_UNAVAILABLE"> brak danych</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- koniec wierszy z sekcji -->
+						</div>
+					</div>
+				</li>
+				<!-- element rozwijany -->
+				<li class="list-group-item">
+					<div class="row toggle" id="dropdown-detail-2" data-toggle="detail-2">
+						<div class="interview-chevron"><i class="fa fa-chevron-down"></i></div>
+						<div class="col-xs-10">Przy przyjęciu</div>
+					</div>
+					<div id="detail-2">
+						<hr></hr>
+						<div class="container">
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputRankin" class="col-sm-2 control-label">Punktacja Rankina</label>
+										<div class="col-xs-5">
+											<input type="text" class="form-control" id="inputRankin" placeholder="Punktacja rankina" name="interview[rankinPoints]" required>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputNIHSS" class="col-sm-2 control-label">Punktacja NIHSS</label>
+										<div class="col-xs-5">
+											<input type="text" class="form-control" id="inputNIHSS" placeholder="Punktacja NIHSS" name="interview[nihssPoints]" required>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputGCS" class="col-sm-2 control-label">Skala GCS</label>
+										<div class="col-xs-5">
+											<input type="text" class="form-control" id="inputGCS" placeholder="Skala GCS" name="interview[gcsScale]">
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputLocation1" class="col-sm-2 control-label">Lokalizacja ogniska objawowego</label>
+										<div class="col-xs-5">
+											<div class="radio">
+												<label><input type="radio" name="interview[symptomLesionLocation]" id="inputLocation1" value="RIGHT"> półkula prawa</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[symptomLesionLocation]" id="inputLocation2" value="LEFT"> półkula lewa</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[symptomLesionLocation]" id="inputLocation3" value="BOTH"> obie półkule</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[symptomLesionLocation]" id="inputLocation4" value="BACK"> tylna jama</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[symptomLesionLocation]" id="inputLocation5" value="OTHER"> inna</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputExamination1" class="col-sm-2 control-label">Badanie obrazowe</label>
+										<div class="col-xs-5">
+											<div class="radio">
+												<label><input type="radio" name="interview[screeningTypeDate]" id="inputExamination1" value="CT_FIRST_DAY"> TK w 1 dobie od udaru</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[screeningTypeDate]" id="inputExamination2" value="CT_LATER"> później niż 1 doba</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[screeningTypeDate]" id="inputExamination3" value="MRI_FIRST_DAY"> MRI w 1 dobie</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[screeningTypeDate]" id="inputExamination4" value="NOT_PERFORMED"> nie wykonywano</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputStrokeType1" class="col-sm-2 control-label">Typ udaru</label>
+										<div class="col-xs-5">
+											<div class="radio">
+												<label><input type="radio" name="interview[strokeType]" id="inputStrokeType1" value="ISCHEMIC"> niedokrwienny</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[strokeType]" id="inputStrokeType2" value="HEMORRHAGIC"> krwotoczny</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[strokeType]" id="inputStrokeType3" value="TIA"> TIA</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputLocationFocus1" class="col-sm-2 control-label">Lokalizacja ogniska potwierdzona badaniami obrazowymi</label>
+										<div class="col-xs-5">
+											<div class="radio">
+												<label><input type="radio" name="interview[screeningLesionLocation]" id="inputLocationFocus1" value="RIGHT"> półkula prawa</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[screeningLesionLocation]" id="inputLocationFocus2" value="LEFT"> półkula lewa</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[screeningLesionLocation]" id="inputLocationFocus3" value="BOTH"> obie półkule</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[screeningLesionLocation]" id="inputLocationFocus4" value="BACK"> tylna jama</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[screeningLesionLocation]" id="inputLocationFocus5" value="DATA_UNAVAILABLE"> brak danych</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputUsg1" class="col-sm-2 control-label">USG przezczaszkowe</label>
+										<div class="col-xs-5">
+											<div class="radio">
+												<label><input type="radio" name="interview[transcranialUltrasonographyResult]" id="inputUsg1" value="SYMPTOMATIC_FLOW_DISORDER"> objawowe zaburzenia przepływu</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[transcranialUltrasonographyResult]" id="inputUsg2" value="NO_FLOW_DISORDER"> bez zaburzeń przepływu</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[transcranialUltrasonographyResult]" id="inputUsg3" value="NO_WINDOW"> brak "okna"</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[transcranialUltrasonographyResult]" id="inputUsg4" value="DATA_UNAVAILABLE"> brak danych</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputUsgHead1" class="col-sm-2 control-label">USG tętnic dogłowowych</label>
+										<div class="col-xs-5">
+											<div class="radio">
+												<label><input type="radio" name="interview[headArteriesUltrasonographyResult]" id="inputUsgHead1" value="SYMPTOMATIC_FLOW_DISORDER"> objawowe zaburzenia przepływu</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[headArteriesUltrasonographyResult]" id="inputUsgHead2" value="NO_FLOW_DISORDER"> bez zaburzeń przepływu</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[headArteriesUltrasonographyResult]" id="inputUsgHead4" value="DATA_UNAVAILABLE"> brak danych</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- koniec wierszy z sekcji -->
+						</div>
+					</div>
+				</li>
+				<!-- element rozwijany -->
+				<li class="list-group-item">
+					<div class="row toggle" id="dropdown-detail-3" data-toggle="detail-3">
+						<div class="interview-chevron"><i class="fa fa-chevron-down"></i></div>
+						<div class="col-xs-10">Wywiad</div>
+					</div>
+					<div id="detail-3">
+						<hr></hr>
+						<div class="container">
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputStrokeInThePast1" class="col-sm-2 control-label">Przebyty wcześniej udar mózgu</label>
+										<div class="col-xs-5">
+											<div class="row">
+                                                <div class="radio">
+                                                    <label><input type="radio" name="interview[strokeInThePast]" id="inputStrokeInThePast1" value="YES"> tak</label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label><input type="radio" name="interview[strokeInThePast]" id="inputStrokeInThePast2" value="NO"> nie</label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label><input type="radio" name="interview[strokeInThePast]" id="inputStrokeInThePast3" value="DATA_UNAVAILABLE"> brak danych</label>
+                                                </div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputHypertension1" class="col-sm-2 control-label">Nadciśnienie tętnicze</label>
+										<div class="col-xs-5">
+											<div class="radio">
+												<label><input type="radio" name="interview[hypertension]" id="inputHypertension1" value="NO"> nie</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[hypertension]" id="inputHypertension2" value="YES_TREATED"> tak - leczone</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[hypertension]" id="inputHypertension3" value="YES_NOT_TREATED"> tak - nieleczone</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[hypertension]" id="inputHypertension4" value="YES_JUST_DIAGNOSED"> świeżo rozpoznane w szpitalu</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[hypertension]" id="inputHypertension5" value="DATA_UNAVAILABLE"> brak danych</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputKidneys1" class="col-sm-2 control-label">Choroby nerek</label>
+										<div class="col-xs-5">
+											<div class="radio">
+												<label><input type="radio" name="interview[kidneysDiseases]" id="inputKidneys1" value="YES"> tak</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[kidneysDiseases]" id="inputKidneys2" value="NO"> nie</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[kidneysDiseases]" id="inputKidneys3" value="DATA_UNAVAILABLE"> brak danych</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputDiabetes1" class="col-sm-2 control-label">Cukrzyca</label>
+										<div class="col-xs-5">
+											<div class="radio">
+												<label><input type="radio" name="interview[diabetes]" id="inputDiabetes1" value="YES"> tak</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[diabetes]" id="inputDiabetes2" value="NO"> nie</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[diabetes]" id="inputDiabetes3" value="DATA_UNAVAILABLE"> brak danych</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label class="col-sm-2 control-label dependent-label">Zmierzony poziom glukozy</label>
+										<div class="col-xs-5">
+											<div class="row form-group">
+												<label for="inputDiabetesLevel1" class="col-xs-4 control-label dependent-label">w pierwszej dobie:</label>
+												<div class="col-xs-8">
+													<div class="input-group group-select">
+														<input type="text" id="inputDiabetesLevel1" class="form-control" name="interview[glucoseLevelDay1]">
+														<span class="input-group-btn">
+															<select name="interview[unitGlucoseLevelDay1]" class="selectpicker" data-width="85px">
+																<option value="MG_PER_DL">mg/dl</option>
+																<option value="MMOL_PER_L">mmol/l</option>
+															</select>
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<div class="col-xs-5 col-sm-offset-2">
+											<div class="row form-group">
+												<label for="inputDiabetesLevel2" class="col-xs-4 control-label dependent-label">w 5 - 7 dobie:</label>
+												<div class="col-xs-8">
+													<div class="input-group group-select">
+														<input type="text" id="inputDiabetesLevel2" class="form-control" name="interview[glucoseLevelDay5to7]">
+														<span class="input-group-btn">
+															<select name="interview[unitGlucoseLevelDay5to7]" class="selectpicker" data-width="85px">
+																<option value="MG_PER_DL">mg/dl</option>
+																<option value="MMOL_PER_L">mmol/l</option>
+															</select>
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputCad1" class="col-sm-2 control-label">Choroba niedokrwienna serca</label>
+										<div class="col-xs-5">
+											<div class="radio">
+												<label><input type="radio" name="interview[ischemicHeartDisease]" id="inputCad1" value="YES"> tak</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[ischemicHeartDisease]" id="inputCad2" value="NO"> nie</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[ischemicHeartDisease]" id="inputCad3" value="DATA_UNAVAILABLE"> brak danych</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputCcs" class="col-sm-2 control-label dependent-label">Klasa CCS</label>
+										<div class="col-xs-5">
+											<div class="radio">
+												<label><input type="radio" name="interview[ccsClass]" id="inputCcs" value="I"> I</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[ccsClass]" id="inputCcs2" value="II"> II</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[ccsClass]" id="inputCcs3" value="III"> III</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[ccsClass]" id="inputCcs4" value="IV"> IV</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[ccsClass]" id="inputCcs5" value="DATA_UNAVAILABLE"> brak danych</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputZaburzenia" class="col-sm-2 control-label">Zaburzenia gospodarki lipidowej</label>
+										<div class="col-xs-5">
+											<div class="radio">
+												<label><input type="radio" name="interview[lipidsDisorders]" id="inputZaburzenia" value="YES"> tak</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[lipidsDisorders]" id="inputZaburzenia2" value="NO"> nie</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[lipidsDisorders]" id="inputZaburzenia3" value="DATA_UNAVAILABLE"> brak danych</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+                                        <label class="col-sm-2 control-label dependent-label">cholesterol całkowity</label>
+										<div class="col-xs-5">
+											<div class="input-group col-xs-12 group-select">
+												<input type="text" class="form-control" placeholder="cholesterol całkowity" title="cholesterol całkowity" name="interview[totalCholesterol]">
+												<span class="input-group-btn">
+													<select name="interview[unitTotalCholesterol]" class="selectpicker" data-width="85px">
+														<option value="MG_PER_DL">mg/dl</option>
+														<option value="MMOL_PER_L">mmol/l</option>
+													</select>
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-12">
+									<div class="form-group">
+                                        <label class="col-sm-2 control-label dependent-label">LDL</label>
+                                        <div class="col-xs-5">
+											<div class="input-group col-xs-12 group-select">
+												<input type="text" class="form-control" placeholder="LDL" title="LDL" name="interview[ldl]">
+												<span class="input-group-btn">
+													<select name="interview[unitLDL]" class="selectpicker" data-width="85px">
+														<option value="MG_PER_DL">mg/dl</option>
+														<option value="MMOL_PER_L">mmol/l</option>
+													</select>
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-12">
+									<div class="form-group">
+                                        <label class="col-sm-2 control-label dependent-label">HDL</label>
+                                        <div class="col-xs-5">
+											<div class="input-group col-xs-12 group-select">
+												<input type="text" class="form-control" placeholder="HDL" title="HDL" name="interview[hdl]">
+												<span class="input-group-btn">
+													<select name="interview[unitHDL]" class="selectpicker" data-width="85px">
+														<option value="MG_PER_DL">mg/dl</option>
+														<option value="MMOL_PER_L">mmol/l</option>
+													</select>
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-12">
+									<div class="form-group">
+                                        <label class="col-sm-2 control-label dependent-label">TRG</label>
+                                        <div class="col-xs-5">
+											<div class="input-group col-xs-12 group-select">
+												<input type="text" class="form-control" placeholder="TRG" title="TRG" name="interview[trg]">
+												<span class="input-group-btn">
+													<select name="interview[unitTRG]" class="selectpicker" data-width="85px">
+														<option value="MG_PER_DL">mg/dl</option>
+														<option value="MMOL_PER_L">mmol/l</option>
+													</select>
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputMigotanie" class="col-sm-2 control-label">Migotanie przedsionków</label>
+										<div class="col-xs-5">
+											<div class="radio">
+												<label><input type="radio" name="interview[atrialFibrillation]" id="inputMigotanie" value="YES"> tak</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[atrialFibrillation]" id="inputMigotanie2" value="NO"> nie</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[atrialFibrillation]" id="inputMigotanie3" value="DATA_UNAVAILABLE"> brak danych</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputAntykoalgulant" class="col-sm-2 control-label dependent-label">leczone antykoagulantem</label>
+										<div class="col-xs-5">
+											<div class="radio">
+												<label><input type="radio" name="interview[afTreatedWithAnticoagulant]" id="inputAntykoalgulant" value="YES"> tak</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[afTreatedWithAnticoagulant]" id="inputAntykoalgulant2" value="NO"> nie</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[afTreatedWithAnticoagulant]" id="inputAntykoalgulant3" value="DATA_UNAVAILABLE"> brak danych</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputTyton" class="col-sm-2 control-label">Palenie tytoniu</label>
+										<div class="col-xs-5">
+											<div class="radio">
+												<label><input type="radio" name="interview[cigarettes]" id="inputTyton" value="NEVER"> nigdy</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[cigarettes]" id="inputTyton2" value="QUIT_MORE_THAN_2_YEARS_AGO"> rzucił > 2 lata temu</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[cigarettes]" id="inputTyton3" value="ACTIVE_SMOKING"> palenie czynne</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[cigarettes]" id="inputTyton4" value="DATA_UNAVAILABLE"> brak danych</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputChoroby" class="col-sm-2 control-label">Choroby tętnic szyjnych</label>
+										<div class="col-xs-5">
+											<div class="radio">
+												<label><input type="radio" name="interview[neckArteriesDiseases]" id="inputChoroby" value="YES"> tak</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[neckArteriesDiseases]" id="inputChoroby2" value="NO"> nie</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[neckArteriesDiseases]" id="inputChoroby3" value="DATA_UNAVAILABLE"> brak danych</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputNiewydolnosc" class="col-sm-2 control-label">Niewydolność serca</label>
+										<div class="col-xs-5">
+											<div class="radio">
+												<label><input type="radio" name="interview[heartFailure]" id="inputNiewydolnosc" value="YES"> tak</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[heartFailure]" id="inputNiewydolnosc2" value="NO"> nie</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[heartFailure]" id="inputNiewydolnosc3" value="DATA_UNAVAILABLE"> brak danych</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputNyha" class="col-sm-2 control-label dependent-label">klasa NYHA</label>
+										<div class="col-xs-5">
+											<div class="radio">
+												<label><input type="radio" name="interview[nyhaClass]" id="inputNyha" value="I"> I</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[nyhaClass]" id="inputNyha2" value="II"> II</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[nyhaClass]" id="inputNyha3" value="III"> III</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[nyhaClass]" id="inputNyha4" value="IV"> IV</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[nyhaClass]" id="inputNyha5" value="DATA_UNAVAILABLE"> brak danych</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputZczz" class="col-sm-2 control-label">Żylna choroba zakrzepowo zatorowa</label>
+										<div class="col-xs-5">
+											<div class="radio">
+												<label><input type="radio" name="interview[veinsThrombosis]" id="inputZczz" value="YES"> tak</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[veinsThrombosis]" id="inputZczz2" value="NO"> nie</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[veinsThrombosis]" id="inputZczz3" value="DATA_UNAVAILABLE"> brak danych</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputHormony" class="col-sm-2 control-label">Terapia hormonalna</label>
+										<div class="col-xs-5">
+											<div class="radio">
+												<label><input type="radio" name="interview[hormoneTherapy]" id="inputHormony" value="YES"> tak</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[hormoneTherapy]" id="inputHormony2" value="NO"> nie</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[hormoneTherapy]" id="inputHormony3" value="DATA_UNAVAILABLE"> brak danych</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+                            <!-- wiersz z sekcji -->
+                            <div class="fluid-row">
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">Wywiad rodzinny</label>
+                                    </div>
+                                </div>
+                            </div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputUdar" class="col-sm-2 control-label dependent-label">udar mózgu</label>
+										<div class="col-xs-5">
+											<div class="radio">
+												<label><input type="radio" name="interview[familyDiseasesStroke]" id="inputUdar" value="YES"> tak</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[familyDiseasesStroke]" id="inputUdar2" value="NO"> nie</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[familyDiseasesStroke]" id="inputUdar3" value="DATA_UNAVAILABLE"> brak danych</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputWywiad" class="col-sm-2 control-label dependent-label">zawał serca (kobiety przed 65 r.ż., mężczyżni przed 55 r.ż.)</label>
+										<div class="col-xs-5">
+											<div class="radio">
+												<label><input type="radio" name="interview[familyDiseasesHeartFailure]" id="inputWywiad" value="YES"> tak</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[familyDiseasesHeartFailure]" id="inputWywiad2" value="NO"> nie</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[familyDiseasesHeartFailure]" id="inputWywiad3" value="DATA_UNAVAILABLE"> brak danych</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputWywiadCukrzyca" class="col-sm-2 control-label dependent-label">cukrzyca</label>
+										<div class="col-xs-5">
+											<div class="radio">
+												<label><input type="radio" name="interview[familyDiseasesDiabetes]" id="inputWywiadCukrzyca" value="YES"> tak</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[familyDiseasesDiabetes]" id="inputWywiadCukrzyca2" value="NO"> nie</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[familyDiseasesDiabetes]" id="inputWywiadCukrzyca3" value="DATA_UNAVAILABLE"> brak danych</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputWywiadChoroba" class="col-sm-2 control-label dependent-label">choroba niedokrwienna serca</label>
+										<div class="col-xs-5">
+											<div class="radio">
+												<label><input type="radio" name="interview[familyDiseasesIschemicHeart]" id="inputWywiadChoroba" value="YES"> tak</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[familyDiseasesIschemicHeart]" id="inputWywiadChoroba2" value="NO"> nie</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[familyDiseasesIschemicHeart]" id="inputWywiadChoroba3" value="DATA_UNAVAILABLE"> brak danych</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputWywiadNadcisnienie" class="col-sm-2 control-label dependent-label">nadciśnienie tętnicze</label>
+										<div class="col-xs-5">
+											<div class="radio">
+												<label><input type="radio" name="interview[familyDiseasesHypertension]" id="inputWywiadNadcisnienie" value="YES"> tak</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[familyDiseasesHypertension]" id="inputWywiadNadcisnienie2" value="NO"> nie</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="interview[familyDiseasesHypertension]" id="inputWywiadNadcisnienie3" value="DATA_UNAVAILABLE"> brak danych</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputLeki" class="col-sm-2 control-label">Przyjmowane leki przed incydentem udarowym</label>
+										<div class="col-xs-5">
+											<div class="checkbox">
+												<label><input type="checkbox" name="interview[drugsBeforeStroke][]" id="inputLeki" value="ACE_I"> ACE-I</label>
+											</div>
+											<div class="checkbox">
+												<label><input type="checkbox" name="interview[drugsBeforeStroke][]" id="inputLeki2" value="ARB"> ARB (sartan)</label>
+											</div>
+											<div class="checkbox">
+												<label><input type="checkbox" name="interview[drugsBeforeStroke][]" id="inputLeki3" value="B_BLOCKER"> B-bloker</label>
+											</div>
+											<div class="checkbox">
+												<label><input type="checkbox" name="interview[drugsBeforeStroke][]" id="inputLeki4" value="CALCIUM_CHANNELS_BLOCKER"> bloker kanałów wapniowych</label>
+											</div>
+											<div class="checkbox">
+												<label><input type="checkbox" name="interview[drugsBeforeStroke][]" id="inputLeki5" value="THIAZIDE_DIURETIC"> diuretyk tiazydowy</label>
+											</div>
+											<div class="checkbox">
+												<label><input type="checkbox" name="interview[drugsBeforeStroke][]" id="inputLeki6" value="LOOP_DIURETIC"> diuretyk pętlowy</label>
+											</div>
+											<div class="checkbox">
+												<label><input type="checkbox" name="interview[drugsBeforeStroke][]" id="inputLeki7" value="ASA"> ASA lub inne leki przeciwpłytkowe</label>
+											</div>
+											<div class="checkbox">
+												<label><input type="checkbox" name="interview[drugsBeforeStroke][]" id="inputLeki8" value="STATIN"> statyna</label>
+											</div>
+											<div class="checkbox">
+												<label><input type="checkbox" name="interview[drugsBeforeStroke][]" id="inputLeki9" value="SPIRONOLACTONE"> spironolakton / eplerenon</label>
+											</div>
+											<div class="checkbox">
+												<label><input type="checkbox" name="interview[drugsBeforeStroke][]" id="inputLeki10" value="ANTI_DIABETIC"> leki przeciwcukrzycowe</label>
+											</div>
+											<div class="checkbox">
+												<label><input type="checkbox" name="interview[drugsBeforeStroke][]" id="inputLeki11" value="ANTICOAGULANTS"> terapia przeciwkrzepliwa</label>
+											</div>
+											<div class="checkbox">
+												<label><input type="checkbox" name="interview[drugsBeforeStroke][]" id="inputLeki12" value="OTHER"> inne leki</label>
+											</div>
+											<div class="checkbox">
+												<label><input type="checkbox" name="interview[drugsBeforeStroke][]" id="inputLeki13" value="NONE"> bez leków</label>
+											</div>
+											<div class="checkbox">
+												<label><input type="checkbox" name="interview[drugsBeforeStroke][]" id="inputLeki14" value="DATA_UNAVAILABLE"> brak danych</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- koniec wierszy z sekcji -->
+						</div>
+					</div>
+				</li>
+				<!-- element rozwijany -->
+				<li class="list-group-item">
+					<div class="row toggle" id="dropdown-detail-4" data-toggle="detail-4">
+						<div class="interview-chevron"><i class="fa fa-chevron-down"></i></div>
+						<div class="col-xs-10">Badania laboratoryjne</div>
+					</div>
+					<div id="detail-4">
+						<hr></hr>
+						<div class="container">
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+                                    <div class="form-group">
+									    <label class="col-sm-2 control-label">Morfologia</label>
+                                    </div>
+								</div>
+                            </div>
+                            <!-- wiersz z sekcji -->
+                            <div class="fluid-row">
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <label for="inputRBC" class="col-sm-2 control-label dependent-label">RBC</label>
+                                        <div class="col-xs-5">
+                                            <div class="input-group">
+                                                <input type="text" id="inputRBC" class="form-control" placeholder="RBC" title="RBC" name="interview[rbc]">
+                                                <span class="input-group-addon">mln/mm<sup>3</sup></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- wiersz z sekcji -->
+                            <div class="fluid-row">
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <label for="inputWBC" class="col-sm-2 control-label dependent-label">WBC</label>
+                                        <div class="col-xs-5">
+                                            <div class="input-group">
+                                                <input type="text" id="inputWBC" class="form-control" placeholder="WBC" title="WBC" name="interview[wbc]">
+                                                <span class="input-group-addon">tys./mm<sup>3</sup></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- wiersz z sekcji -->
+                            <div class="fluid-row">
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <label for="inputHGB" class="col-sm-2 control-label dependent-label">HGB</label>
+                                        <div class="col-xs-5">
+                                            <div class="input-group">
+                                                <input type="text" id="inputHGB" class="form-control" placeholder="HGB" title="HGB" name="interview[hgb]">
+                                                <span class="input-group-addon">g/dl</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- wiersz z sekcji -->
+                            <div class="fluid-row">
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <label for="inputHT" class="col-sm-2 control-label dependent-label">HT</label>
+                                        <div class="col-xs-5">
+                                            <div class="input-group">
+                                                <input type="text" id="inputHT" class="form-control" placeholder="HT" title="HT" name="interview[ht]">
+                                                <span class="input-group-addon">%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- wiersz z sekcji -->
+                            <div class="fluid-row">
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <label for="inputMCV" class="col-sm-2 control-label dependent-label">MCV</label>
+                                        <div class="col-xs-5">
+                                            <div class="input-group">
+                                                <input type="text" id="inputMCV" class="form-control" placeholder="MCV" title="MCV" name="interview[mcv]">
+                                                <span class="input-group-addon">fl</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- wiersz z sekcji -->
+                            <div class="fluid-row">
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <label for="inputPLT" class="col-sm-2 control-label dependent-label">PLT</label>
+                                        <div class="col-xs-5">
+                                            <div class="input-group">
+                                                <input type="text" id="inputPLT" class="form-control" placeholder="PLT" title="PLT" name="interview[plt]">
+                                                <span class="input-group-addon">tys./mm<sup>3</sup></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputKreatynina" class="col-sm-2 control-label">Kreatynina</label>
+										<div class="col-xs-5">
+											<div class="input-group">
+												<input type="text" id="inputKreatynina" class="form-control" placeholder="Kreatynina" name="interview[creatinine]">
+												<span class="input-group-btn">
+													<select name="interview[unitCreatinine]" class="selectpicker" data-width="85px">
+														<option value="MG_PER_DL">mg/dl</option>
+														<option value="UMOL_PER_L">µmol/l</option>
+													</select>
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputGFR" class="col-sm-2 control-label">GFR (Cockroft)</label>
+										<div class="col-xs-5">
+											<div class="input-group">
+												<input type="text" id="inputGFR" class="form-control" placeholder="GFR (Cockroft)" name="interview[cockroftGFR]">
+												<span class="input-group-addon">ml/min</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputGFRMDRD" class="col-sm-2 control-label">GFR (MDRD)</label>
+										<div class="col-xs-5">
+											<div class="input-group">
+												<input type="text" id="inputGFRMDRD" class="form-control" placeholder="GFR (MDRD)" name="interview[mdrdGFR]">
+												<span class="input-group-addon">ml/min/1,73 m<sup>2</sup></span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputTSH" class="col-sm-2 control-label">TSH</label>
+										<div class="col-xs-5">
+											<div class="input-group">
+												<input type="text" id="inputTSH" class="form-control" placeholder="TSH" name="interview[tsh]">
+												<span class="input-group-addon">mU/l</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputPotas" class="col-sm-2 control-label">Potas</label>
+										<div class="col-xs-5">
+											<div class="input-group group-select">
+												<input type="text" id="inputPotas" class="form-control" placeholder="Potas" name="interview[potassium]">
+												<span class="input-group-btn">
+													<select name="interview[unitPotassium]" class="selectpicker" data-width="85px">
+														<option value="MEQ_PER_L">mEg/l</option>
+														<option value="MMOL_PER_L">mmol/l</option>
+													</select>
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputINR" class="col-sm-2 control-label">INR</label>
+										<div class="col-xs-5">
+											<input type="text" id="inputINR" class="form-control" placeholder="INR" name="interview[inr]">
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputCRP" class="col-sm-2 control-label">CRP</label>
+										<div class="col-xs-5">
+											<div class="input-group">
+												<input type="text" id="inputCRP" class="form-control" placeholder="CRP" name="interview[crp]">
+												<span class="input-group-addon">mg/l</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="textareaInne" class="col-sm-2 control-label">Inne</label>
+										<div class="col-xs-5">
+											<textarea id="textareaInne" name="interview[laboratoryOthers]" placeholder="Inne" class="form-control"></textarea>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- koniec wierszy z sekcji -->
+						</div>
+					</div>
+				</li>
+				<!-- element rozwijany -->
+				<li class="list-group-item">
+					<div class="row toggle" id="dropdown-detail-5" data-toggle="detail-5">
+						<div class="interview-chevron"><i class="fa fa-chevron-down"></i></div>
+						<div class="col-xs-10">Leczenie szpitalne</div>
+					</div>
+					<div id="detail-5">
+						<hr></hr>
+						<div class="container">
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputLekiSzpital" class="col-sm-2 control-label">Leki podawane w czasie pobytu w szpitalu</label>
+										<div class="col-xs-5">
+											<div class="checkbox">
+												<label><input type="checkbox" name="interview[drugsOnHospitalisation][]" id="inputLekiSzpital" value="ACE_I"> ACE-I</label>
+											</div>
+											<div class="checkbox">
+												<label><input type="checkbox" name="interview[drugsOnHospitalisation][]" id="inputLekiSzpital2" value="ARB"> ARB (sartan)</label>
+											</div>
+											<div class="checkbox">
+												<label><input type="checkbox" name="interview[drugsOnHospitalisation][]" id="inputLekiSzpital3" value="B_BLOCKER"> B-bloker</label>
+											</div>
+											<div class="checkbox">
+												<label><input type="checkbox" name="interview[drugsOnHospitalisation][]" id="inputLekiSzpital4" value="CALCIUM_CHANNELS_BLOCKER"> bloker kanałów wapniowych</label>
+											</div>
+											<div class="checkbox">
+												<label><input type="checkbox" name="interview[drugsOnHospitalisation][]" id="inputLekiSzpital5" value="THIAZIDE_DIURETIC"> diuretyk tiazydowy</label>
+											</div>
+											<div class="checkbox">
+												<label><input type="checkbox" name="interview[drugsOnHospitalisation][]" id="inputLekiSzpital6" value="LOOP_DIURETIC"> diuretyk pętlowy</label>
+											</div>
+											<div class="checkbox">
+												<label><input type="checkbox" name="interview[drugsOnHospitalisation][]" id="inputLekiSzpital7" value="ASA"> ASA lub inne leki przeciwpłytkowe</label>
+											</div>
+											<div class="checkbox">
+												<label><input type="checkbox" name="interview[drugsOnHospitalisation][]" id="inputLekiSzpital8" value="STATIN"> statyna</label>
+											</div>
+											<div class="checkbox">
+												<label><input type="checkbox" name="interview[drugsOnHospitalisation][]" id="inputLekiSzpital9" value="SPIRONOLACTONE"> spironolakton / eplerenon</label>
+											</div>
+											<div class="checkbox">
+												<label><input type="checkbox" name="interview[drugsOnHospitalisation][]" id="inputLekiSzpital10" value="ANTI_DIABETIC"> leki przeciwcukrzycowe</label>
+											</div>
+											<div class="checkbox">
+												<label><input type="checkbox" name="interview[drugsOnHospitalisation][]" id="inputLekiSzpital11" value="ANTICOAGULANTS"> terapia przeciwkrzepliwa</label>
+											</div>
+											<div class="checkbox">
+												<label><input type="checkbox" name="interview[drugsOnHospitalisation][]" id="inputLekiSzpital12" value="OTHER"> inne leki</label>
+											</div>
+											<div class="checkbox">
+												<label><input type="checkbox" name="interview[drugsOnHospitalisation][]" id="inputLekiSzpital13" value="NONE"> bez leków</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- koniec wierszy z sekcji -->
+						</div>
+					</div>
+				</li>
+				<!-- element rozwijany -->
+				<li class="list-group-item">
+					<div class="row toggle" id="dropdown-detail-6" data-toggle="detail-6">
+						<div class="interview-chevron"><i class="fa fa-chevron-down"></i></div>
+						<div class="col-xs-10">Wypis</div>
+					</div>
+					<div id="detail-6">
+						<hr></hr>
+						<div class="container">
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="inputLekiWypis" class="col-sm-2 control-label">Zmodyfikowane leczenie przy wypisie ze szpitala</label>
+										<div class="col-xs-5">
+											<div class="checkbox">
+												<label><input type="checkbox" name="interview[drugsOnDischarge][]" id="inputLekiWypis" value="ACE_I"> ACE-I</label>
+											</div>
+											<div class="checkbox">
+												<label><input type="checkbox" name="interview[drugsOnDischarge][]" id="inputLekiWypis2" value="ARB"> ARB (sartan)</label>
+											</div>
+											<div class="checkbox">
+												<label><input type="checkbox" name="interview[drugsOnDischarge][]" id="inputLekiWypis3" value="B_BLOCKER"> B-bloker</label>
+											</div>
+											<div class="checkbox">
+												<label><input type="checkbox" name="interview[drugsOnDischarge][]" id="inputLekiWypis4" value="CALCIUM_CHANNELS_BLOCKER"> bloker kanałów wapniowych</label>
+											</div>
+											<div class="checkbox">
+												<label><input type="checkbox" name="interview[drugsOnDischarge][]" id="inputLekiWypis5" value="THIAZIDE_DIURETIC"> diuretyk tiazydowy</label>
+											</div>
+											<div class="checkbox">
+												<label><input type="checkbox" name="interview[drugsOnDischarge][]" id="inputLekiWypis6" value="LOOP_DIURETIC"> diuretyk pętlowy</label>
+											</div>
+											<div class="checkbox">
+												<label><input type="checkbox" name="interview[drugsOnDischarge][]" id="inputLekiWypis7" value="ASA"> ASA lub inne leki przeciwpłytkowe</label>
+											</div>
+											<div class="checkbox">
+												<label><input type="checkbox" name="interview[drugsOnDischarge][]" id="inputLekiWypis8" value="STATIN"> statyna</label>
+											</div>
+											<div class="checkbox">
+												<label><input type="checkbox" name="interview[drugsOnDischarge][]" id="inputLekiWypis9" value="SPIRONOLACTONE"> spironolakton / eplerenon</label>
+											</div>
+											<div class="checkbox">
+												<label><input type="checkbox" name="interview[drugsOnDischarge][]" id="inputLekiWypis10" value="ANTI_DIABETIC"> leki przeciwcukrzycowe</label>
+											</div>
+											<div class="checkbox">
+												<label><input type="checkbox" name="interview[drugsOnDischarge][]" id="inputLekiWypis11" value="ANTICOAGULANTS"> terapia przeciwkrzepliwa</label>
+											</div>
+											<div class="checkbox">
+												<label><input type="checkbox" name="interview[drugsOnDischarge][]" id="inputLekiWypis12" value="OTHER"> inne leki</label>
+											</div>
+											<div class="checkbox">
+												<label><input type="checkbox" name="interview[drugsOnDischarge][]" id="inputLekiWypis13" value="NONE"> bez leków</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- wiersz z sekcji -->
+							<div class="fluid-row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="textareaRozpoznanie" class="col-sm-2 control-label">Rozpoznanie dodatkowe / inne informacje</label>
+										<div class="col-xs-5">
+											<textarea id="textareaRozpoznanie" name="interview[additionalInformation]" placeholder="Rozpoznanie dodatkowe / inne informacje" class="form-control"></textarea>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- koniec wierszy z sekcji -->
+						</div>
+					</div>
+				</li>
+				<!-- element nierozwijany -->
+				<li class="list-group-item">
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="btn-group btn-group-justified" role="group">
+								<div class="btn-group" role="group">
+									<a href="#go-back" class="btn btn-default col-xs-6">Anuluj</a>
+								</div>
+								<div class="btn-group" role="group">
+									<button type="submit" class="btn btn-primary col-xs-6">Potwierdź</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</form>
+</div>
